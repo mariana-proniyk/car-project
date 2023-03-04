@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $primaryBackground;
+    font-family: $mainFonts;
+    color: $primaryTextColor;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $primaryTextColor;
+    transition: all 0.3s ease-out;
+}
+
+i {
+    display: inline-block;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 64px;
+    letter-spacing: 0.006em;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 0.006em;
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 28px;
+    opacity: 0.8;
+}
+.content-center {
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.button {
+    padding: 12px 24px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    transition: all 300ms ease-in-out;
+    &.is-primary {
+        background: $secondaryColor;
+        color: $primaryTextColor;
+        &:hover {
+            background-color: #f46804e8;
+        }
+    }
+    &.is-border {
+        background: transparent;
+        border: 1px solid #ee8313;
+        color: $secondaryColor;
+    }
+}
+
+.main-header {
+    padding-top: 40px;
+    .wrap-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .wrap-menu {
+            display: flex;
+            align-items: center;
+            max-width: 742px;
+            width: 100%;
+            nav {
+                ul {
+                    display: flex;
+                    li {
+                        margin-left: 50px;
+                        &:first-child {
+                            margin-left: 0px;
+                        }
+                        a {
+                            transition: all 300ms ease-in-out;
+                            &:hover {
+                                color: $secondaryColor;
+                            }
+                        }
+                    }
+                }
+            }
+            .menu-btn,
+            .button {
+                max-width: 184px;
+                width: 100%;
+            }
+            .menu-btn {
+                margin-left: 78px;
+            }
+        }
+    }
+}
+
+main {
+    margin-top: 166px;
+}
+
+.home-hero {
+    position: relative;
+    .banner {
+        max-width: 590px;
+        p {
+            margin-top: 32px;
+            margin-bottom: 48px;
+            max-width: 473px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            max-width: 350px;
+            a {
+                &.is-primary {
+                    max-width: 119px;
+                }
+                &.is-border {
+                    max-width: 200px;
+                }
+            }
+        }
+        .features {
+            display: flex;
+            margin-top: 40px;
+            .text {
+                font-size: 40px;
+                line-height: 52px;
+                margin-left: 40px;
+                &:first-child {
+                    margin-left: 0px;
+                }
+                span {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+    img {
+        position: absolute;
+        bottom: -211px;
+        right: -89px;
+    }
+}
+
+.rent-section {
+    margin-top: 187px;
+    h2 {
+        text-align: center;
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 40px;
+        .car-item {
+            max-width: 584px;
+            width: 100%;
+            height: 100%;
+            min-height: 524px;
+            background-image: url(../../public/images/car.png);
+            background-size: cover;
+            margin-bottom: 32px;
+            padding: 48px 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 300ms ease-in-out;
+            a {
+                text-align: right;
+                i {
+                    transform: rotate(-180deg);
+                    margin-left: 18px;
+                    color: #ffcc2c;
+                    font-size: 14px;
+                }
+            }
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.services {
+    margin-top: 120px;
+    .cards {
+        margin-top: 66px;
+        display: flex;
+        justify-content: space-between;
+        .info-car {
+            max-width: 384px;
+            img {
+                width: 100%;
+                height: 360px;
+                object-fit: cover;
+                margin-bottom: 24px;
+            }
+            p {
+                margin-top: 16px;
+            }
+        }
+    }
+}

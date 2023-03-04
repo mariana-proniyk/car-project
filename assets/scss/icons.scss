@@ -1,0 +1,34 @@
+$icons-font: "icons";
+
+@font-face {
+    font-family: $icons-font;
+    src: url("../../public/fonts/icons/icons.ttf?bf8cb3b470141ed4445be84c3a49e7d4")
+            format("truetype"),
+        url("../../public/fonts/icons/icons.woff?bf8cb3b470141ed4445be84c3a49e7d4")
+            format("woff"),
+        url("../../public/fonts/icons/icons.woff2?bf8cb3b470141ed4445be84c3a49e7d4")
+            format("woff2"),
+        url("../../public/fonts/icons/icons.svg?bf8cb3b470141ed4445be84c3a49e7d4#icons")
+            format("svg");
+}
+
+i[class^="icon-"]:before,
+i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$icons-map: (
+    "arrow-back": "\f101",
+    "arrow-right": "\f102",
+);
+
+.icon-arrow-back:before {
+    content: map-get($icons-map, "arrow-back");
+}
