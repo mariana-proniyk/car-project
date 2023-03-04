@@ -1,0 +1,37 @@
+include components/index.pug
+
+doctype html
+html(lang='en')
+    +Head('Home page')
+    body
+        include parts/header.pug
+        main 
+            section.home-hero.content-center 
+                .banner 
+                    h2 The World's Best Luxury Car Deals
+                    p HKinvestor can provide rentals of the most exclusive cars like Ferrari and Lamborghini.
+                    .buttons 
+                        a(href="#") 
+                            +Button('Buy Now', 'is-primary')
+                        a(href="#") 
+                            +Button('Video Introduction', 'is-border')
+                    .features 
+                        .text 500+
+                            span Luxury Cars
+                        .text #1
+                            span Best Deal Car
+                img(src="./public/images/hero.png", srcset="./public/images/hero.png 1x, ./public/images/retina/hero.png 2x"  alt="")
+            section.rent-section.content-center
+                h2 Rent a Luxury Car
+                .cards 
+                    +CarItem('Supercars')
+                    +CarItem('Sportcars')
+                    +CarItem('SUV')
+                    +CarItem('Supersuv')
+            section.services.content-center
+                h2 Our Other Services
+                .cards 
+                    +InfoCar('Private Charter', 'Pinjam Mobil Rent also offers you discreet and speedy, transfers via helicopter or private planes.')
+                    +InfoCar('Chauffer Driven Car Rentals', 'Our chauffers are professional drivers who provide a discreet, reliable punctual and professional service.')
+                    +InfoCar('Wedding Car Rentals', 'If you want to celebrate your wedding in style and elegance, choose one car from our luxury collection.')
+        include parts/footer.pug
