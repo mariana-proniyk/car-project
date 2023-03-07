@@ -39,6 +39,12 @@ h5 {
     line-height: 32px;
 }
 
+h6 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+}
+
 p {
     font-size: 16px;
     line-height: 28px;
@@ -76,45 +82,47 @@ p {
         background: transparent;
         border: 1px solid #ee8313;
         color: $secondaryColor;
+        &:hover {
+            color: #f46804e8;
+            border: 1px solid #f46804e8;
+        }
     }
 }
 
 .main-header {
     padding-top: 40px;
-    .wrap-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .wrap-menu {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        .wrap-menu {
-            display: flex;
-            align-items: center;
-            max-width: 742px;
-            width: 100%;
-            nav {
-                ul {
-                    display: flex;
-                    li {
-                        margin-left: 50px;
-                        &:first-child {
-                            margin-left: 0px;
-                        }
-                        a {
-                            transition: all 300ms ease-in-out;
-                            &:hover {
-                                color: $secondaryColor;
-                            }
+        align-items: center;
+        max-width: 742px;
+        width: 100%;
+        nav {
+            ul {
+                display: flex;
+                li {
+                    margin-left: 50px;
+                    &:first-child {
+                        margin-left: 0px;
+                    }
+                    a {
+                        transition: all 300ms ease-in-out;
+                        &:hover {
+                            color: $secondaryColor;
                         }
                     }
                 }
             }
-            .menu-btn,
-            .button {
-                max-width: 184px;
-                width: 100%;
-            }
-            .menu-btn {
-                margin-left: 78px;
-            }
+        }
+        .menu-btn,
+        .button {
+            max-width: 184px;
+            width: 100%;
+        }
+        .menu-btn {
+            margin-left: 78px;
         }
     }
 }
@@ -209,7 +217,7 @@ main {
     }
 }
 
-.services {
+.services-section {
     margin-top: 120px;
     .cards {
         margin-top: 66px;
@@ -227,5 +235,150 @@ main {
                 margin-top: 16px;
             }
         }
+    }
+}
+
+.destination-section {
+    margin-top: 120px;
+    h2 {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        max-width: 591px;
+        margin-bottom: 40px;
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .destination-card {
+            max-width: 384px;
+            cursor: pointer;
+            margin-bottom: 24px;
+            img {
+                width: 100%;
+                display: flex;
+            }
+            .body {
+                background: #131313;
+                padding: 24px;
+                p {
+                    margin-top: 10px;
+                    margin-bottom: 25px;
+                }
+                .price {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 17px;
+                    i {
+                        margin-right: 19px;
+                    }
+                    span {
+                        line-height: 28px;
+                    }
+                }
+                a {
+                    color: $secondaryColor;
+                    line-height: 28px;
+                    &:hover {
+                        color: #f46804e8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.location-section {
+    margin-top: 162px;
+    text-align: center;
+    h2 {
+        margin-bottom: 40px;
+    }
+    img {
+        width: 1200px;
+        height: 524px;
+    }
+}
+
+.main-footer {
+    margin-top: 102px;
+    background: #1f1905;
+    .wrap-conteiner {
+        .top-text {
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            .left-content {
+                .logo {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 64px;
+                    span {
+                        margin-left: 17px;
+                    }
+                }
+                .motto {
+                    font-size: 18px;
+                    line-height: 32px;
+                    max-width: 235px;
+                }
+            }
+            .right-content {
+                display: flex;
+                margin-top: 40px;
+                .footer-menu {
+                    display: flex;
+                    flex-direction: row;
+                    .list {
+                        margin-left: 73px;
+                        &:first-child {
+                            margin-left: 0px;
+                        }
+                        ul {
+                            margin-top: 32px;
+                            opacity: 0.8;
+                            font-size: 16px;
+                            line-height: 20px;
+                            li {
+                                margin-top: 28px;
+                                &:first-child {
+                                    margin-top: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .social {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 70px;
+                    text-align: right;
+                    color: #ffff;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 20px;
+                    cursor: pointer;
+                    a {
+                        margin-top: 50px;
+                        &:first-child {
+                            margin-top: 0px;
+                        }
+                        i {
+                            margin-right: 19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom-text {
+        background-color: $secondaryColor;
+        width: 100%;
+        margin-top: 66px;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 16px;
+        line-height: 28px;
     }
 }
